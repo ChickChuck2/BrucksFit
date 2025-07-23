@@ -1,0 +1,240 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cor */
+:root {
+    --cor-preto: #181818;
+    --cor-cinza-escuro: #232526;
+    --cor-cinza: #414345;
+    --cor-cinza-claro: #b0b3b8;
+    --cor-branco: #f5f5f5;
+    --cor-branco-puro: #fff;
+    --cor-destaque: #e0e0e0;
+    --cor-hover: #33363a;
+    --cor-shadow: #0003;
+}
+
+/* Estilos do corpo */
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(135deg, var(--cor-preto) 0%, var(--cor-cinza) 100%);
+    color: var(--cor-branco);
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 8vw 16px 8vw;
+    background: rgba(24, 24, 24, 0.97);
+    box-shadow: 0 2px 16px var(--cor-shadow);
+    animation: fadeInDown 1s;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--cor-branco-puro);
+    background-color: transparent;
+    border-color: transparent;
+    text-shadow: 0 2px 8px #0002;
+    cursor: pointer;
+}
+
+/* Navegação */
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    margin-left: 32px;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--cor-cinza-claro), var(--cor-branco-puro));
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+nav a:hover {
+    color: var(--cor-destaque);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Estilos do conteúdo principal */
+main {
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 16px 40px 16px;
+    background: linear-gradient(120deg, var(--cor-cinza-claro) 0%, var(--cor-branco-puro) 100%);
+    color: var(--cor-preto);
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 8px 32px var(--cor-shadow);
+    animation: fadeIn 1.2s;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 32px;
+}
+
+.btn {
+    background: linear-gradient(90deg, var(--cor-cinza-escuro), var(--cor-cinza));
+    color: var(--cor-branco-puro);
+    padding: 14px 36px;
+    border: none;
+    border-radius: 24px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 16px var(--cor-shadow);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, var(--cor-branco-puro), var(--cor-cinza-claro));
+    color: var(--cor-preto);
+    transform: translateY(-2px) scale(1.04);
+}
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 64px 8vw;
+    flex-wrap: wrap;
+    animation: fadeInUp 1.2s;
+}
+
+.produto-card {
+    background: rgba(35, 37, 38, 0.97);
+    border-radius: 24px;
+    box-shadow: 0 4px 24px var(--cor-shadow);
+    padding: 32px 24px 24px 24px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: cardAppear 1.2s;
+}
+
+.produto-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px var(--cor-cinza-claro);
+    background: var(--cor-hover);
+}
+
+.produto-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    border: 4px solid var(--cor-cinza-claro);
+    box-shadow: 0 2px 12px var(--cor-cinza-claro);
+    transition: border 0.3s;
+    background: var(--cor-branco-puro);
+}
+
+.produto-card:hover img {
+    border: 4px solid var(--cor-branco-puro);
+}
+
+.produto-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--cor-branco-puro);
+}
+
+.produto-card p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: var(--cor-cinza-claro);
+}
+
+.preco {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
+    letter-spacing: 1px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 32px 0 16px 0;
+    color: var(--cor-cinza-claro);
+    font-size: 1rem;
+    background: none;
+    margin-top: 48px;
+}
+
+@media (max-width: 900px) {
+    .produtos {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 48px 4vw;
+    }
+    header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px 4vw 12px 4vw;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(80px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes cardAppear {
+    from { opacity: 0; transform: scale(0.95);}
+    to { opacity: 1; transform: scale(1);}
+}
