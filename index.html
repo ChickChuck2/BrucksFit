@@ -4,48 +4,297 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrucksFit Suplementos</title>
+    <meta name="description" content="BrucksFit Suplementos - Loja de suplementos alimentares, proteínas, vitaminas, pré-treinos e acessórios para sua performance.">
+<meta name="keywords" content="suplementos, whey, creatina, vitaminas, academia, fitness, esportes, saúde">
+<meta name="author" content="BrucksFit">
     <link rel="stylesheet" href="src/styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="src/scripts/carousel.js"></script>
+    <script src="src/scripts/header-menu.js"></script>
+    <script src="src/scripts/contato.js"></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="src/assets/logo.png" alt="BrucksFit Logo" height="128">
+            <img src="src/assets/logo.png" alt="BrucksFit Logo" height="64">
         </div>
-        <nav>
-            <a href="#">Início</a>
-            <a href="#">Produtos</a>
-            <a href="#">Contato</a>
+        <nav id="nav">
+            <a href="#banner-carousel">Início</a>
+            <a href="#categorias">Categorias</a>
+            <a href="#promocoes">Promoções</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#sobre-nos">Sobre Nós</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contato">Contato</a>
+            <div class="redes-sociais-header">
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <a href="#" class="cart-link" aria-label="Carrinho">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
         </nav>
+        <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </header>
     <main>
+        <!-- Banner/Carrossel -->
+        <section class="banner-carousel" id="banner-carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="https://images.unsplash.com/photo-1517960413843-0aee8e2d471c?auto=format&fit=crop&w=900&q=80" alt="Promoção Whey Protein">
+                    <div class="carousel-caption">
+                        <h2>Bem-vindo à BrucksFit!</h2>
+                        <p>Suplementos de qualidade para sua evolução.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Promoção Creatina">
+                    <div class="carousel-caption">
+                        <h2>Ofertas Especiais</h2>
+                        <p>Aproveite descontos exclusivos em toda a loja!</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=900&q=80" alt="Pré-treino">
+                    <div class="carousel-caption">
+                        <h2>Pré-treinos Potentes</h2>
+                        <p>Energia e foco para superar seus limites.</p>
+                    </div>
+                </div>
+                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-progress">
+                <div class="progress-bar"><span class="fill"></span></div>
+                <div class="progress-bar"><span class="fill"></span></div>
+                <div class="progress-bar"><span class="fill"></span></div>
+            </div>
+            </div>
+        </section>
+        
+        <!-- Hero -->
         <section class="hero">
             <h1>Suplementos Premium para sua Performance</h1>
             <p>Descubra os melhores produtos para potencializar seus resultados na academia.</p>
             <a href="#" class="btn">Ver Produtos</a>
         </section>
-        <section class="produtos">
+        
+        <!-- Categorias -->
+        <section class="categorias" id="categorias">
+            <h2>Categorias</h2>
+            <div class="categorias-lista">
+                <div class="categoria-card">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <span>Proteínas</span>
+                </div>
+                <div class="categoria-card">
+                    <i class="fa-solid fa-capsules"></i>
+                    <span>Vitaminas</span>
+                </div>
+                <div class="categoria-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Pré-treinos</span>
+                </div>
+                <div class="categoria-card">
+                    <i class="fa-solid fa-bottle-water"></i>
+                    <span>BCAA & Aminoácidos</span>
+                </div>
+                <div class="categoria-card">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Acessórios</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Promoções -->
+        <section class="promocoes" id="promocoes">
+            <h2>Promoções Especiais</h2>
+            <div class="promocoes-lista">
+                <div class="promocao-card">
+                    <span class="badge"><i class="fa-solid fa-bottle-water"></i> 25% OFF</span>
+                    <img src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&w=400&h=400&fit=crop" alt="BCAA" class="promocao-img">
+                    <h3><i class="fa-solid fa-bottle-water"></i> BCAA</h3>
+                    <p>Recupere-se mais rápido e reduza a fadiga muscular com BCAA em promoção!</p>
+                    <span class="preco-antigo">R$ 79,90</span>
+                    <span class="preco-promocao">R$ 59,92</span>
+                    <a href="#" class="btn btn-promocao"><i class="fa-solid fa-cart-plus"></i> Aproveitar</a>
+                </div>
+                <div class="promocao-card">
+                    <span class="badge"><i class="fa-solid fa-seedling"></i> 18% OFF</span>
+                    <img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&w=400&h=400&fit=crop" alt="Barra de Proteína" class="promocao-img">
+                    <h3><i class="fa-solid fa-seedling"></i> Barra de Proteína</h3>
+                    <p>Praticidade e sabor para o seu dia a dia com desconto especial!</p>
+                    <span class="preco-antigo">R$ 12,90</span>
+                    <span class="preco-promocao">R$ 10,58</span>
+                    <a href="#" class="btn btn-promocao"><i class="fa-solid fa-cart-plus"></i> Aproveitar</a>
+                </div>
+                <div class="promocao-card">
+                    <span class="badge"><i class="fa-solid fa-mug-hot"></i> 10% OFF</span>
+                    <img src="https://images.pexels.com/photos/5938362/pexels-photo-5938362.jpeg?auto=compress&w=400&h=400&fit=crop" alt="Termogênico" class="promocao-img">
+                    <h3><i class="fa-solid fa-mug-hot"></i> Termogênico</h3>
+                    <p>Queime mais calorias e acelere seu metabolismo com termogênico em oferta!</p>
+                    <span class="preco-antigo">R$ 99,90</span>
+                    <span class="preco-promocao">R$ 89,91</span>
+                    <a href="#" class="btn btn-promocao"><i class="fa-solid fa-cart-plus"></i> Aproveitar</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Produtos -->
+        <section class="produtos" id="produtos">
             <div class="produto-card">
-                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Whey Protein">
-                <h2>Whey Protein</h2>
+                <img src="https://www.gsuplementos.com.br/upload/produto/layout/1684/mockup-whey30g-leite-em-po-v5.webp" alt="Whey Protein">
+                <h2><i class="fa-solid fa-dumbbell"></i> Whey Protein</h2>
                 <p>Ganhe massa muscular com proteína de alta qualidade.</p>
                 <span class="preco">R$ 129,90</span>
             </div>
             <div class="produto-card">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Creatina">
-                <h2>Creatina</h2>
+                <img src="https://lojamaxtitanium.vtexassets.com/arquivos/ids/157977-1920-0/Creatina-Creapure-250g.png?v=638470625756800000" alt="Creatina">
+                <h2><i class="fa-solid fa-bolt"></i> Creatina</h2>
                 <p>Mais força e explosão para seus treinos intensos.</p>
                 <span class="preco">R$ 89,90</span>
             </div>
             <div class="produto-card">
-                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Pré-treino">
-                <h2>Pré-treino</h2>
+                <img src="https://cdn.awsli.com.br/600x700/2356/2356489/produto/249728422/huger-bubblegum-160g-fvbpbsff48.png" alt="Pré-treino">
+                <h2><i class="fa-solid fa-fire"></i> Pré-treino</h2>
                 <p>Energia e foco para superar seus limites.</p>
                 <span class="preco">R$ 99,90</span>
             </div>
         </section>
+        
+        <!-- Depoimentos -->
+        <section class="depoimentos" id="depoimentos">
+            <h2>O que nossos clientes dizem</h2>
+            <div class="depoimentos-lista">
+                <div class="depoimento-card">
+                    <div class="depoimento-usuario">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente 1">
+                        <span>Lucas Andrade</span>
+                    </div>
+                    <p class="depoimento-texto">
+                        <i class="fa-solid fa-quote-left"></i>
+                        Produtos de excelente qualidade, entrega rápida e atendimento nota 10! Recomendo muito a BrucksFit.
+                        <i class="fa-solid fa-quote-right"></i>
+                    </p>
+                    <div class="depoimento-estrelas">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-usuario">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente 2">
+                        <span>Mariana Silva</span>
+                    </div>
+                    <p class="depoimento-texto">
+                        <i class="fa-solid fa-quote-left"></i>
+                        Comprei creatina e whey, chegaram super rápido e com preço ótimo. Vou comprar de novo!
+                        <i class="fa-solid fa-quote-right"></i>
+                    </p>
+                    <div class="depoimento-estrelas">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-usuario">
+                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Cliente 3">
+                        <span>Rafael Costa</span>
+                    </div>
+                    <p class="depoimento-texto">
+                        <i class="fa-solid fa-quote-left"></i>
+                        Loja confiável, produtos originais e ótimas promoções. Recomendo para todos da academia!
+                        <i class="fa-solid fa-quote-right"></i>
+                    </p>
+                    <div class="depoimento-estrelas">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sobre Nós -->
+        <section class="sobre-nos" id="sobre-nos">
+            <h2>Sobre Nós</h2>
+            <div class="sobre-nos-conteudo">
+                <div class="sobre-nos-texto">
+                    <p>
+                        A <strong>BrucksFit</strong> nasceu da paixão pelo esporte e pelo bem-estar. Somos uma loja especializada em suplementos alimentares, com foco em qualidade, confiança e resultados reais para nossos clientes.
+                    </p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Produtos 100% originais e certificados</li>
+                        <li><i class="fa-solid fa-check"></i> Atendimento personalizado e suporte especializado</li>
+                        <li><i class="fa-solid fa-check"></i> Entrega rápida para todo o Brasil</li>
+                        <li><i class="fa-solid fa-check"></i> Ofertas e promoções exclusivas</li>
+                    </ul>
+                    <p>
+                        Nosso compromisso é ajudar você a alcançar seus objetivos com saúde, segurança e o melhor custo-benefício. Seja bem-vindo à família BrucksFit!
+                    </p>
+                </div>
+                <div class="sobre-nos-img">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=400&q=80" alt="Equipe BrucksFit">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dúvidas Frequentes -->
+        <section class="faq" id="faq">
+            <h2>Dúvidas Frequentes</h2>
+            <div class="faq-lista">
+                <details>
+                    <summary>Os produtos são originais?</summary>
+                    <p>Sim, trabalhamos apenas com produtos 100% originais e certificados pelos órgãos competentes.</p>
+                </details>
+                <details>
+                    <summary>Quais são as formas de pagamento?</summary>
+                    <p>Aceitamos cartões de crédito, débito, Pix e boleto bancário.</p>
+                </details>
+                <details>
+                    <summary>Como funciona a entrega?</summary>
+                    <p>Enviamos para todo o Brasil com opções de frete rápido e rastreamento.</p>
+                </details>
+                <details>
+                    <summary>Posso trocar ou devolver um produto?</summary>
+                    <p>Sim, você pode solicitar troca ou devolução em até 7 dias após o recebimento.</p>
+                </details>
+            </div>
+        </section>
+        
+        <!-- Contato -->
+        <section class="contato" id="contato">
+            <h2>Fale Conosco</h2>
+            <form class="contato-form" action="https://formspree.io/f/mgvzazjl" method="POST">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
     </main>
+    <!-- No rodapé -->
     <footer>
+        <div class="redes-sociais">
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/5599999999999" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
         <p>&copy; 2025 BrucksFit Suplementos. Todos os direitos reservados.</p>
     </footer>
 </body>
